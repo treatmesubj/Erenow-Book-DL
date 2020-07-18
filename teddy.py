@@ -27,7 +27,7 @@ if __name__ == "__main__":
 		soup = BeautifulSoup(requests.get(chapter_url).text, 'html.parser')
 
 		# clean up html
-		del_elems_css = ("div.nk-share-place", "header", "div.nk-nav-mobile", 
+		del_elems_css = ("div.nk-share-place", "header", "div#nk-nav-mobile", 
 			"footer", "div.nk-main div.nk-box", "#text-center div", "div.nk-search")
 		for elem_css in del_elems_css:
 			try:
