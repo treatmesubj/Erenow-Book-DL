@@ -21,7 +21,7 @@ if __name__ == "__main__":
 	chapter_elems = soup.select("#text-center p a[href]")
 	for chapter_elem in chapter_elems:
 
-		chapter_name = "".join(x for x in chapter_elem.text if x.isalnum() or x == " ")
+		chapter_name = "".join(x for x in chapter_elem.text if x.isalnum() or x in(" ", "-"))
 		chapter_url = f"{book_url}/{chapter_elem.attrs['href'].split('/')[-1]}"
 
 		soup = BeautifulSoup(requests.get(chapter_url).text, 'html.parser')
