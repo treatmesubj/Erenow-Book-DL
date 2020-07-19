@@ -43,6 +43,10 @@ if __name__ == "__main__":
 		for img in imgs:
 			img.attrs['src'] = f"{book_url}/{img.attrs['src']}"
 
+		# dark mode
+		if "--dark" in sys.argv:
+			soup.select_one("body").attrs["style"] = "background-color: black; color: white;"
+
 		# write file
 		print(f"writing {chapter_name}...")
 		with open(f"{book_path}/{chapter_name}.html", "w+", encoding="utf8") as f:
