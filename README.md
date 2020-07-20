@@ -4,7 +4,7 @@ I was enjoying a cigar and relistening to one of my favorite books: _The Rise of
 
 Usage: `py teddy.py <book-url> [--dark]`
 
-the optional `[--dark]` argument inverts colors so that the background is black and the text is white
+the optional `--dark` argument inverts colors so that the background is black and the text is white
 
 
 ![alt text](https://github.com/treatmesubj/Erenow-Book-DL/blob/master/Screenshot%20(1).png)
